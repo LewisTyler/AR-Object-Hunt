@@ -1,2 +1,53 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# =============== #
+# Unity Text Files
+# =============== #
+
+# Ensure text files use LF line endings and are normalized
+*.cs           text diff=csharp
+*.shader       text
+*.cginc        text
+*.hlsl         text
+*.compute      text
+*.glsl         text
+*.txt          text
+*.json         text
+*.xml          text
+*.yaml         text
+*.yml          text
+*.asmdef       text
+*.rsp          text
+*.meta         text merge=unityyamlmerge eol=lf
+*.unity        text merge=unityyamlmerge eol=lf
+*.prefab       text merge=unityyamlmerge eol=lf
+*.asset        text merge=unityyamlmerge eol=lf
+*.mat          text merge=unityyamlmerge eol=lf
+*.anim         text merge=unityyamlmerge eol=lf
+*.controller   text merge=unityyamlmerge eol=lf
+
+# Binary files
+*.dll          binary
+*.exe          binary
+*.png          binary
+*.jpg          binary
+*.jpeg         binary
+*.tga          binary
+*.gif          binary
+*.psd          binary
+*.mp3          binary
+*.ogg          binary
+*.wav          binary
+*.fbx          binary
+*.prefab       merge=unityyamlmerge eol=lf
+*.unitypackage binary
+*.a            binary
+*.lib          binary
+
+# =============== #
+# Git LFS (optional)
+# =============== #
+
+# If you're using Git LFS, uncomment below and track large binary assets
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
+
